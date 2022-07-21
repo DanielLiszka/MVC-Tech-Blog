@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  
+.card {
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+}
+
+.rows{
+    display:flex;
+    flex-direction: column;
+}
+
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: rgba(51, 51, 51, 0.678);
+    background-color: rgb(247, 243, 243);
+  }
+  
+  button {
+    border: 0;
+    padding: 1%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  textarea:focus, input:focus {
+    outline: none;
+    border: 1px solid #2f83e9;
+  }
+  
+  textarea {
+    min-width: 35%;
+    min-height: 100px;
+  }
+  
+  form > div {
+    margin-bottom: 3%;
+  }
+  
+  form label {
+    display: block;
+  }
+  
+  .wrapper {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  
+  a:hover {
+    color: #3380df;
+  }
+  
+  header {
+    border-bottom: 1px solid rgb(194, 193, 193);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+  }
+  
+  main {
+    flex: 1;
+    padding: 2% 4%;
+  }
+  
+  .btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #205494;
+    font-size: 100%;
+    font-weight: bold;
+    margin-left: 16px;
+  }
+  
+  .post-list {
+    margin: 0;
+    padding: 0;
+  }
+  
+  textarea, input {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+
+  .btn-no-style:hover {
+    background: none;
+    color: #317fdd;
+  }
+  
+  .delete-post-btn {
+    background-color: darkred;
+  }
+  
+  .delete-post-btn:hover {
+    background-color: darkorange;
+  }
+  
+  .post {
+    margin-bottom: 3%;
+    line-height: 140%;
+  }
+  
+  .comment-form {
+    margin-bottom: 5%;
+  }
+  
+  .comment {
+    padding: 1%;
+    margin-bottom: 1%;
+  }
+
+  .post .title span {
+    font-style: sans-serif;
+    font-size: 85%;
+    color: grey;
+  }
+  
+  .edit-link {
+    display: block;
+    margin: -1.5% 0 2% 0;
+  }
+  
+  .comment .meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
+  }
+  
+  .edit-post-form {
+    margin-bottom: 5%;
+  }
+  
+  footer {
+    border-top: 1px solid white;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+  }
