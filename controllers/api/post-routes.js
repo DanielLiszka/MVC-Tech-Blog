@@ -34,6 +34,31 @@ router.get('/', (req, res) => {
       });
   });
 
+  //Update posts
+  router.put('/:id', withAuth, (req, res) => {
+    Post.update({
+        title: req.body.title,
+        post_content: req.body.post_content
+      },
+      {
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(dbPostData => {
+        if (!dbPostData) {
+          res.status(404).json({ message: 'No post found with this id' });
+          return;
+        }
+        res.json(dbPostData);
+      })
+      .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+      });
+  });
+
+  //Get posts
   router.get('/:id', (req, res) => {
     Post.findOne({
       where: {
@@ -73,6 +98,7 @@ router.get('/', (req, res) => {
       });
   });
 
+//Create posts
 router.post('/', withAuth, (req, res) => {
     Post.create({
       title: req.body.title,
@@ -86,29 +112,7 @@ router.post('/', withAuth, (req, res) => {
       });
 });
 
-router.put('/:id', withAuth, (req, res) => {
-    Post.update({
-        title: req.body.title,
-        post_content: req.body.post_content
-      },
-      {
-        where: {
-          id: req.params.id
-        }
-      })
-      .then(dbPostData => {
-        if (!dbPostData) {
-          res.status(404).json({ message: 'No post found with this id' });
-          return;
-        }
-        res.json(dbPostData);
-      })
-      .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-      });
-  });
-
+  //Delete posts
   router.delete('/:id', withAuth, (req, res) => {
     Post.destroy({
       where: {

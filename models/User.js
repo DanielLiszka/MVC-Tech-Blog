@@ -2,29 +2,26 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const bcrypt = require('bcrypt');
 
-// create our User model
+// user model
 class User extends Model {
     checkPassword(loginPw) {
         return bcrypt.compareSync(loginPw, this.password);
     }
 }
 
-// define table columns and configuration
+// table columns for user
 User.init(
     {
-        // define an id column
         id: {
           type: DataTypes.INTEGER,
           allowNull: false,
           primaryKey: true,
           autoIncrement: true
         },
-        // define a username column
         username: {
           type: DataTypes.STRING,
           allowNull: false
         },
-        // define an email column
         email: {
           type: DataTypes.STRING,
           allowNull: false,
@@ -33,7 +30,6 @@ User.init(
             isEmail: true
           }
         },
-        // define a password column
         password: {
           type: DataTypes.STRING,
           allowNull: false,

@@ -6,7 +6,7 @@ This is a blog using MySQL2, Express, Sequelize, Handlebars, and a mysql databas
 
 ## Deployment
 
-Visit the Herokuapp.com deployment here: [Link](https://pwa-budget-tracker-app-3434.herokuapp.com/)
+Visit the Herokuapp.com deployment here: [Link](https://mvc-tech-blog-139.herokuapp.com/)
 
 ## Screenshot
 
